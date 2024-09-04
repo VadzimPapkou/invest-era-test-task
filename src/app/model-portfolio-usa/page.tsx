@@ -10,7 +10,7 @@ export default async function ModelPortfolioUsa() {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.h1}>Российские компании с наибольшим числом работников</h1>
+      <h1 className={styles.h1}>Компании с высокой капитализацией — рынок акций России</h1>
       <Table className={styles.table} columns={columns} data={tableData} />
     </main>
   );
