@@ -1,0 +1,83 @@
+.table {
+  --border: 1px solid #DBDBDB;
+
+  position: relative;
+  display: inline-grid;
+  max-width: calc(100vw - 48px);
+  grid-template-columns: repeat(var(--columnsCount), min-content);
+  border-radius: 12px;
+  border: var(--border);
+  overflow-x: scroll;
+
+  font-size: 14px;
+  line-height: 157%;
+  font-weight: 500;
+  font-family: 'Fira Code', sans-serif;
+}
+
+.th {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  background-color: #ededed;
+  font-weight: 600;
+  border-bottom: var(--border);
+}
+
+.th::after {
+  content: attr(data-unit);
+  margin-top: auto;
+  display: block;
+  color: #818387;
+}
+
+.firstTh {
+  position: sticky;
+  left: 0;
+  border-right: var(--border);
+}
+
+.td {
+  background-color: #fff;
+  text-wrap: nowrap;
+  padding: 16px 24px;
+  border-bottom: var(--border);
+}
+
+.firstRowTd {
+  position: sticky;
+  left: 0px;
+  font-weight: 600; 
+  border-right: var(--border);
+  color: var(--text-secondary);
+}
+
+.firstTd {
+  font-weight: 700;
+}
+
+.lastRowTd {
+  border-bottom: none;
+}
+
+.green {
+  color: #036f35;
+}
+
+.red {
+  color: #d5393c;
+}
+
+.evenRowTd {
+  background-color: #f8f8f8;
+}
+
+.shadow::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  box-shadow: inset 10px 0 8px -8px rgba(5, 5, 5, 0.06);
+}
